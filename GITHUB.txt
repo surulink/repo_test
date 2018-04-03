@@ -1,0 +1,67 @@
+GIT - Version control System - Free/Open source
+
+If we have a file and if we are making any changes to the file often, thne we can have an vcs where all the changes have been tracked as versions 
+and we can go back to any versions and see what changes have been made to the file and when.
+
+1.Track changes done in files/folders
+2.Collaborate in teams
+
+CENTRALIZED AND DISTRIBUTED VCS
+
+Centralized - Always online with the server which contains the repository and whatever changes made have been reflected to main repository always. 
+             This will have a negative impact if something goes wrong when someone commit their changes.
+
+Distributed VCS - pull a local copy of repository and each user can commit their changes to it and push the final update to main repository.
+
+Github - a website to host all our repositories online
+
+Github and Git are not equal
+
+Git can be used with any repository system and Github can be used with any version control system
+
+
+Workflow 
+
+We can pull/clone a local copy of repositories 
+
+We can make our changes in working copy, then using add command, all changes will be put in the staging area. Then using commit, 
+changes have been put in local repository. Then using push, all the changes have been pushed to main repostiroy which is in the remote server.
+
+Create a program / project in VCS
+Start jenkins on port
+Create a jenkins job
+Add the program to git
+Jenkins - Add git plugin
+Configure jenkins job to trigger the execution when a change is pushed to git
+
+Create a jenkins job 
+
+	Create new item and name it and select freee style project
+	Give commands to execute the program
+	Build now and can see the output in console output
+
+
+Add the program to git/github
+	
+	Initialize git - git init
+	git status
+ 	git add . - to add files in the current directory
+	git commit -m "added hello world program"
+	it is committed locally and it has to be added to the remote repository, Now go to github
+	create remote repository and give name, select public and create repository
+	we will get location like http or ssh
+	git remote add origin <location from git>
+	git push -u origin master
+	
+Jenkins add git plugin 
+
+	Go to Jenkins and add gitplugin from manage plugin
+	Once added, go to project and click configure, then check Git and Poll SCM. Give schedule as when to execute this build
+	Then check buld history for the latest action
+	We can check by adding new files our project and check if any new items added to build history after doing git add and git commit
+	
+
+   
+   
+
+ 
